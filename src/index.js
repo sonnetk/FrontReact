@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom'; //Импорт реакт дома, чтобы
 import App from './App';
 
 ReactDOM.render(
-    <div>
-        тест
-    </div>,
+    <App/>,
   document.getElementById('root')
 );
