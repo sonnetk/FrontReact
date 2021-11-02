@@ -6,8 +6,6 @@
     .grid{
         display: grid;
         grid-template-columns: 100%;
-        /*grid-template-rows: minmax(50px,auto);*/
-        /*grid-auto-rows: minmax(50px,auto);*/
     }
 
     aside{
@@ -47,32 +45,6 @@
 
 @media screen and (min-width: 1280px) {
 
-    /*.grid{*/
-    /*    height: 100%;*/
-    /*    display: grid;*/
-    /*    grid-gap: 20px;*/
-    /*    grid-template-columns: 1fr 1fr 1fr;*/
-    /*    grid-template-rows: minmax(100px,auto);*/
-    /*    grid-template-areas:*/
-    /*    "header header aside"*/
-    /*    "main main aside"*/
-    /*    "main main aside"*/
-    /*    "main main aside";*/
-    /*    grid-auto-rows: minmax(100px,auto);*/
-    /*}*/
-
-    /*main {*/
-    /*    display: grid;*/
-    /*    grid-gap: 40px 20px;*/
-    /*    grid-template-columns: 100px minmax(100px, 1200px);*/
-    /*    grid-template-rows: minmax(100px,auto);*/
-    /*    grid-template-areas:*/
-    /*    "div1 content"*/
-    /*    "div2 content"*/
-    /*    "div3 content";*/
-    /*    grid-auto-rows: minmax(100px,auto);*/
-    /*}*/
-
     .grid{
         display: grid;
         grid-template-columns: 250px 1fr 1fr;
@@ -102,12 +74,10 @@
         align-items: center;
     }
 
-
     main{
         grid-column: 2/3;
         grid-row: 2/3;
     }
-
 
     .nav ul {
         height: 100%;
@@ -150,8 +120,7 @@ section, h1, li, img {
 }
 
 header{
-    /*grid-area: header;*/
-    background: aliceblue;
+    background: #e3e3ec;
 }
 header div{
     display: flex;
@@ -181,7 +150,6 @@ a{
 }
 
 aside{
-    /*grid-area: aside;*/
     position: sticky;
     top: 0;
 }
@@ -196,25 +164,8 @@ li a {
 nav li a:hover,
 form input[type=submit]:hover
 {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgb(65, 76, 124);
 }
-
-
-/*.div1{*/
-/*    grid-area: div1;*/
-/*}*/
-
-/*.div2{*/
-/*    grid-area: div2;*/
-/*}*/
-
-/*.div3{*/
-/*    grid-area: div3;*/
-/*}*/
-
-/*main{*/
-/*    grid-area: main;*/
-/*}*/
 
 
 .about p,
@@ -240,6 +191,7 @@ main .about div{
 main .genres div{
     overflow-x:auto;
 }
+
 /* ТАБЛИЦА */
 main .genres table{
     width: 100%;
@@ -267,7 +219,7 @@ table td {
     vertical-align: top;
 }
 table tr:nth-child(odd){
-    background: aliceblue;
+    background: #e3e3ec;
 }
 table tr td:first-child {
     border-radius: 8px 0 0 8px;
@@ -320,8 +272,9 @@ form {
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: #e3e3ec;
     padding: 20px;
+    margin-bottom: 30px;
 }
 
 fieldset{
@@ -334,7 +287,7 @@ legend{
 }
 
 .footer{
-    background-color: aliceblue;
+    background-color: #e3e3ec;
     width: 100%;
 }
 

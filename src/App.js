@@ -7,16 +7,15 @@ function App() {
       <div className="grid" id="root">
         <header>
           <div>
-            <h1><a href='index.html'> <img src="styles/images/logo.png" alt="Логотип" /></a> КNИГИVАМ</h1>
+            <h1>ИТЕРАЦИИ</h1>
           </div>
         </header>
         <aside>
           <div className="nav">
             <ul className="menu">
-              <li><a href='#about'>О нас</a></li>
-              <li><a href='#genres'>Жанры</a></li>
-              <li><a href='#form'>Анкета</a></li>
-              <li><a href='#contacts'>Контакты</a></li>
+              <li><a href='#about'>React</a></li>
+              <li><a href='#genres'>JavaScript</a></li>
+              <li><a href='#form'>HTML+CSS</a></li>
             </ul>
           </div>
         </aside>
@@ -31,23 +30,8 @@ function App() {
         </div>
         <main>
           <div className="content">
-            <div className="about">
-              <h2 id="about">О нас</h2>
-              <div>
-                <p> Приветствуем Вас, уважаемый посетитель!<br />
-                  <b> КNИГИVАМ </b> – городской буккроссинг.
-                  Процесс буккроссинга состоит из простейшего действия, основанного на принципе <i> «прочитал —
-                  отдай другому» </i>.
-                  Мы готовы принять у Вас пришедшую в ненадобность книгу,
-                  чтобы любой желающий мог забрать ее у нас и прочитать. Книги,
-                  непригодные для передачи, мы самостоятельно сдадим на переработку!<br />
-                  Для участия в нашем проекте Вам необходимо только заполнить
-                  форму пользователя.</p>
-                <img id="clickBooks" src="styles/images/books.svg" alt="Книги" width="15%" height="15%" />
-              </div>
-            </div>
             <div>
-              <h2>Кнопочки</h2>
+              <h2>JavaScript</h2>
               <button id="clickHere">НАЖМИ НА МЕНЯ</button>
               <button id="hHere">НАВЕДИ НА МЕНЯ</button>
               <input id="inputOne" placeholder="ВВЕДИ ТЕКСТ" />
@@ -75,6 +59,21 @@ function App() {
                   <button id="clickPromise">Promise</button>
                   <button id="clickAsync">async/await</button>
                   <span id="resultClick"> </span>
+            </div>
+            <div className="about">
+              <h2>HTML+CSS</h2>
+              <h2 id="about">О нас</h2>
+              <div>
+                <p> Приветствуем Вас, уважаемый посетитель!<br />
+                  <b> КNИГИVАМ </b> – городской буккроссинг.
+                  Процесс буккроссинга состоит из простейшего действия, основанного на принципе <i> «прочитал —
+                    отдай другому» </i>.
+                  Мы готовы принять у Вас пришедшую в ненадобность книгу,
+                  чтобы любой желающий мог забрать ее у нас и прочитать. Книги,
+                  непригодные для передачи, мы самостоятельно сдадим на переработку!<br />
+                  Для участия в нашем проекте Вам необходимо только заполнить
+                  форму пользователя.</p>
+              </div>
             </div>
             <div className="genres">
               <h2 id="genres">Жанры</h2>
