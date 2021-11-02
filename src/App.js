@@ -32,6 +32,7 @@ function App() {
           <div className="content">
             <div>
               <h2>JavaScript</h2>
+              <span> Iter 5</span>
               <button id="clickHere">НАЖМИ НА МЕНЯ</button>
               <button id="hHere">НАВЕДИ НА МЕНЯ</button>
               <input id="inputOne" placeholder="ВВЕДИ ТЕКСТ" />
@@ -48,17 +49,17 @@ function App() {
               <button className="go">Назад Х2</button>
             </div>
             <div>
-              <br />
-                <button id="clickCookie">Cookie!</button>
-                <button id="clickSS">Session Storage</button>
-                <button id="clickLS">Local Storage</button>
+              <span> Iter 6</span>
+              <button id="clickCookie">Cookie!</button>
+              <button id="clickSS">Session Storage</button>
+              <button id="clickLS">Local Storage</button>
             </div>
             <div>
-              <br />
-                <input id="inputLink" placeholder="ИМЯ ПОЛЬЗОВАТЕЛЯ" />
-                  <button id="clickPromise">Promise</button>
-                  <button id="clickAsync">async/await</button>
-                  <span id="resultClick"> </span>
+              <span> Iter 7</span>
+              <input id="inputLink" placeholder="ИМЯ ПОЛЬЗОВАТЕЛЯ" />
+              <button id="clickPromise">Promise</button>
+              <button id="clickAsync">async/await</button>
+              <span id="resultClick"> </span>
             </div>
             <div className="about">
               <h2>HTML+CSS</h2>

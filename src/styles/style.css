@@ -242,7 +242,7 @@ table tr td:last-child {
 
 input {
     padding: 8px 20px;
-    margin: 8px 0;
+    margin: 8px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -254,7 +254,7 @@ input[type=submit] {
     background-color: var(--primary-color);
     color: white;
     padding: 8px 20px;
-    margin: 8px 0;
+    margin: 8px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -311,8 +311,8 @@ button{
     background-color: var(--primary-color);
     color: white;
     padding: 6px 10px;
-    margin: 8px 0;
+    margin: 4px;
     border: none;
     border-radius: 4px;
-    cursor: pointer
+    cursor: pointer;
 }
