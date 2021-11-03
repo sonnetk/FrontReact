@@ -371,3 +371,40 @@ document.addEventListener('DOMContentLoaded', function () {
 // - интеграция готовых файлов в структуру приложения
 
 // - Webpack (настройка сборки, скрипты запуска, добавление обработчиков) - попробовать
+
+
+//Итерация 9.
+// Работа с React.
+//
+// Цель итерации - изучить базис React, классовый подход к организации кода, классовые компоненты, наследование компонентов, паттерн renderProps.
+
+
+// Полезные ссылки:
+// https://reactjs.org/tutorial/tutorial.html
+// https://ru.reactjs.org/docs/hello-world.html
+// https://ru.reactjs.org/docs/react-without-jsx.html
+// https://ru.reactjs.org/docs/introducing-jsx.html
+// https://ru.reactjs.org/docs/rendering-elements.html
+// https://ru.reactjs.org/docs/components-and-props.html
+// https://ru.reactjs.org/docs/render-props.html
+//
+// https://reactrouter.com/web/guides/quick-start
+// https://ru.reactjs.org/docs/code-splitting.html#route.
+//
+// https://ru.reactjs.org/docs/glossary.html#state
+
+
+// Текущее задание:
+// переписать предыдущую страницу (или откопировать, как будет удобнее) под React с использованием render, createElement.
+// Внедрить компонент Router, чтобы можно было отображать разный контент по разным URL. Реализовать внутреннее состояние (state) компонента.
+
+
+// Полученные знания:
+// - Синтаксис React
+// - React.createElement
+// - ReactDOM.render
+// - React.Router
+// - JSX
+// - классовый подход
+// - конструктор классового компонента
+// - паттерн renderProps

@@ -20,9 +20,9 @@ function App() {
           </div>
         </aside>
         <div className="divs">
-          <div className="div1"><a href="#"><img src="styles/images/friends.png" alt="Друзья" width="90" height="90" /></a></div>
+          <div className="div1"><a href="#"><img src="styles/images/friends.png" alt="Люди" width="90" height="90" /></a></div>
           <div className="div2"><a href="#">
-            <img src="styles/images/cat.png" alt="Котик" width="90" height="90" /></a>
+            <img src="styles/images/cat.png" alt="Кот" width="90" height="90" /></a>
             <button id="buttonStop">Не дам вызывать alert</button>
           </div>
           <div className="div3"><a href="#"><img src="styles/images/open-book.png" alt="Книга" width="90" height="90" /></a>
