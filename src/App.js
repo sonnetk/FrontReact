@@ -1,33 +1,43 @@
 import React from "react";
-import '/home/user/my-app/src/styles/style.css'
+import '/home/user/my-app/src/styles/style.css';
+import Footer from "./components/Footer";
+import cat1 from '/home/user/my-app/src/styles/images/cat1.jpg'
+import cat3 from '/home/user/my-app/src/styles/images/cat3.jpg'
+import cat5 from '/home/user/my-app/src/styles/images/cat5.jpg'
+import cat6 from '/home/user/my-app/src/styles/images/cat6.jpg'
+import cat7 from '/home/user/my-app/src/styles/images/cat7.jpg'
+import cat8 from '/home/user/my-app/src/styles/images/cat8.jpg'
+
+
+const table = [
+    [
+      { title: 'Фантастика' },
+      { title: 'Фантастика' },
+      { title: 'Фантастика' },
+      { title: 'Фантастика' },
+      { title: 'Фантастика' },
+      { title: 'Фантастика' },
+    ],
+  [
+      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
+      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
+      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
+      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
+      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
+      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
+    ],
+  [
+      { count: 234 },
+      { count: 644 },
+      { count: 234 },
+      { count: 644 },
+      { count: 234 },
+      { count: 644 },
+    ]
+]
 
 function App() {
   return (
-    <div className="App">
-      <div className="grid" id="root">
-        <header>
-          <div>
-            <h1>ИТЕРАЦИИ</h1>
-          </div>
-        </header>
-        <aside>
-          <div className="nav">
-            <ul className="menu">
-              <li><a href='#about'>React</a></li>
-              <li><a href='#genres'>JavaScript</a></li>
-              <li><a href='#form'>HTML+CSS</a></li>
-            </ul>
-          </div>
-        </aside>
-        <div className="divs">
-          <div className="div1"><a href="#"><img src="styles/images/friends.png" alt="Люди" width="90" height="90" /></a></div>
-          <div className="div2"><a href="#">
-            <img src="styles/images/cat.png" alt="Кот" width="90" height="90" /></a>
-            <button id="buttonStop">Не дам вызывать alert</button>
-          </div>
-          <div className="div3"><a href="#"><img src="styles/images/open-book.png" alt="Книга" width="90" height="90" /></a>
-          </div>
-        </div>
         <main>
           <div className="content">
             <div>
@@ -81,30 +91,56 @@ function App() {
               <div>
                 <table>
                   <caption>Вы можете найти у нас следующие жанры книг</caption>
-                  <tr>
-                    <th>Фантастика</th>
-                    <th>Мистика</th>
-                    <th>Драма</th>
-                    <th>Научно-популярные</th>
-                    <th>Детективы</th>
-                    <th>Учебная литература</th>
-                  </tr>
-                  <tr>
-                    <td><img src="styles/images/cat3.jpg" alt="Фантастика" width="160" height="160" /></td>
-                    <td><img src="styles/images/cat6.jpg" alt="Мистика" width="160" height="160" /></td>
-                    <td><img src="styles/images/cat5.jpg" alt="Драма" width="160" height="160px" /></td>
-                    <td><img src="styles/images/cat7.jpg" alt="Научно-популярные" width="160" height="160" /></td>
-                    <td><img src="styles/images/cat1.jpg" alt="Детективы" width="160" height="160" /></td>
-                    <td><img src="styles/images/cat8.jpg" alt="Учебная литература" width="160" height="160" /></td>
-                  </tr>
-                  <tr>
-                    <td>В наличии книг: 157</td>
-                    <td>В наличии книг: 124</td>
-                    <td>В наличии книг: 98</td>
-                    <td>В наличии книг: 145</td>
-                    <td>В наличии книг: 72</td>
-                    <td>В наличии книг: 105</td>
-                  </tr>
+                  {table.map((tr, ind) => {
+                    if (ind === 0) {
+                      return <tr>
+                        {
+                          tr.map((th) => <th>{th.title}</th>)
+                        }
+                      </tr>
+                    }
+                    if (ind === 1) {
+                      return <tr>
+                        {
+                          tr.map((th) => <td><img src={th.img} alt={th.alt} width={th.width} height={th.height}/></td>)
+                        }
+                      </tr>
+                    }
+                    if (ind === 2) {
+                      return <tr>
+                        {
+                          tr.map((th) => <th>В наличии книг: {th.count}</th>)
+                        }
+                      </tr>
+                    }
+                  })}
+
+                  {/*<tr>*/}
+                  {/*  <th>Фантастика</th>*/}
+                  {/*  <th>Мистика</th>*/}
+                  {/*  <th>Драма</th>*/}
+                  {/*  <th>Научно-популярные</th>*/}
+                  {/*  <th>Детективы</th>*/}
+                  {/*  <th>Учебная литература</th>*/}
+                  {/*</tr>*/}
+                  {/*<tr>*/}
+                  {/*  /!*<td><img src={cat1} alt="Фантастика" width="160" height="160" /></td>*!/*/}
+                  {/*  /!*<td><img src={cat3} alt="Мистика" width="160" height="160" /></td>*!/*/}
+                  {/*  /!*<td><img src={cat5} alt="Драма" width="160" height="160" /></td>*!/*/}
+                  {/*  /!*<td><img src={cat6} alt="Научно-популярные" width="160" height="160" /></td>*!/*/}
+                  {/*  /!*<td><img src={cat7} alt="Детективы" width="160" height="160" /></td>*!/*/}
+                  {/*  /!*<td><img src={cat8} alt="Учебная литература" width="160" height="160" /></td>*!/*/}
+                  {/*  */}
+
+                  {/*</tr>*/}
+                  {/*<tr>*/}
+                  {/*  <td>В наличии книг: 157</td>*/}
+                  {/*  <td>В наличии книг: 124</td>*/}
+                  {/*  <td>В наличии книг: 98</td>*/}
+                  {/*  <td>В наличии книг: 145</td>*/}
+                  {/*  <td>В наличии книг: 72</td>*/}
+                  {/*  <td>В наличии книг: 105</td>*/}
+                  {/*</tr>*/}
                 </table>
               </div>
             </div>
@@ -161,20 +197,10 @@ function App() {
                 </div>
                 <input id="submit" name="submit" type="submit" />
               </form>
-              <div className="footer">
-                <h2 id="contacts">Наши контакты</h2>
-                <ul className="contacts">
-                  <li> г.Тула, пр. Ленина, 100500</li>
-                  <li> 88005553535</li>
-                  <li>knigivam.tula</li>
-                </ul>
-                <span> &copy; Все права защищены</span>
-              </div>
+              <Footer />
             </div>
           </div>
         </main>
-      </div>
-    </div>
   );
 }
 
