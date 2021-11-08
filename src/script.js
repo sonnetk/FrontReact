@@ -403,8 +403,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // - Синтаксис React
 // - React.createElement
 // - ReactDOM.render
-// - React.Router
 // - JSX
+// - React.Router
 // - классовый подход
 // - конструктор классового компонента
 // - паттерн renderProps
