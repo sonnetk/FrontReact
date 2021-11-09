@@ -1,40 +1,7 @@
 import React from "react";
 import '/home/user/my-app/src/styles/style.css';
 import Footer from "./components/Footer";
-import cat1 from '/home/user/my-app/src/styles/images/cat1.jpg'
-import cat3 from '/home/user/my-app/src/styles/images/cat3.jpg'
-import cat5 from '/home/user/my-app/src/styles/images/cat5.jpg'
-import cat6 from '/home/user/my-app/src/styles/images/cat6.jpg'
-import cat7 from '/home/user/my-app/src/styles/images/cat7.jpg'
-import cat8 from '/home/user/my-app/src/styles/images/cat8.jpg'
-
-
-const table = [
-    [
-      { title: 'Фантастика' },
-      { title: 'Фантастика' },
-      { title: 'Фантастика' },
-      { title: 'Фантастика' },
-      { title: 'Фантастика' },
-      { title: 'Фантастика' },
-    ],
-  [
-      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
-      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
-      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
-      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
-      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
-      {alt: 'Фантастика', img: cat1, width: 160, height: 160},
-    ],
-  [
-      { count: 234 },
-      { count: 644 },
-      { count: 234 },
-      { count: 644 },
-      { count: 234 },
-      { count: 644 },
-    ]
-]
+import Table from "./components/Table";
 
 function App() {
   return (
@@ -88,61 +55,7 @@ function App() {
             </div>
             <div className="genres">
               <h2 id="genres">Жанры</h2>
-              <div>
-                <table>
-                  <caption>Вы можете найти у нас следующие жанры книг</caption>
-                  {table.map((tr, ind) => {
-                    if (ind === 0) {
-                      return <tr>
-                        {
-                          tr.map((th) => <th>{th.title}</th>)
-                        }
-                      </tr>
-                    }
-                    if (ind === 1) {
-                      return <tr>
-                        {
-                          tr.map((th) => <td><img src={th.img} alt={th.alt} width={th.width} height={th.height}/></td>)
-                        }
-                      </tr>
-                    }
-                    if (ind === 2) {
-                      return <tr>
-                        {
-                          tr.map((th) => <th>В наличии книг: {th.count}</th>)
-                        }
-                      </tr>
-                    }
-                  })}
-
-                  {/*<tr>*/}
-                  {/*  <th>Фантастика</th>*/}
-                  {/*  <th>Мистика</th>*/}
-                  {/*  <th>Драма</th>*/}
-                  {/*  <th>Научно-популярные</th>*/}
-                  {/*  <th>Детективы</th>*/}
-                  {/*  <th>Учебная литература</th>*/}
-                  {/*</tr>*/}
-                  {/*<tr>*/}
-                  {/*  /!*<td><img src={cat1} alt="Фантастика" width="160" height="160" /></td>*!/*/}
-                  {/*  /!*<td><img src={cat3} alt="Мистика" width="160" height="160" /></td>*!/*/}
-                  {/*  /!*<td><img src={cat5} alt="Драма" width="160" height="160" /></td>*!/*/}
-                  {/*  /!*<td><img src={cat6} alt="Научно-популярные" width="160" height="160" /></td>*!/*/}
-                  {/*  /!*<td><img src={cat7} alt="Детективы" width="160" height="160" /></td>*!/*/}
-                  {/*  /!*<td><img src={cat8} alt="Учебная литература" width="160" height="160" /></td>*!/*/}
-                  {/*  */}
-
-                  {/*</tr>*/}
-                  {/*<tr>*/}
-                  {/*  <td>В наличии книг: 157</td>*/}
-                  {/*  <td>В наличии книг: 124</td>*/}
-                  {/*  <td>В наличии книг: 98</td>*/}
-                  {/*  <td>В наличии книг: 145</td>*/}
-                  {/*  <td>В наличии книг: 72</td>*/}
-                  {/*  <td>В наличии книг: 105</td>*/}
-                  {/*</tr>*/}
-                </table>
-              </div>
+              <Table />
             </div>
             <div className="form">
               <h2 id="form">Анкета</h2>
