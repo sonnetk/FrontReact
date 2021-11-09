@@ -5,7 +5,7 @@ function Header() {
     return (
         React.createElement('header', null,
             React.createElement ('div', null,
-                React.createElement ('h1', null, `ИТЕРАЦИИ`)))
+                React.createElement ('h1', null, `ITERATIONS`)))
         // <header>
         //     <div>
         //         <h1>ИТЕРАЦИИ</h1>

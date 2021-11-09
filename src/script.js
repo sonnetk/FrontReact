@@ -210,7 +210,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //    - сохранение Cookie и перезапись с параметрами
         document.querySelector('#clickCookie').onclick = () => {
-
             let name = "my name";
             let value = "Tanya K"
             document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
