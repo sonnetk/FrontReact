@@ -26,12 +26,12 @@ const table = [
         {alt: 'Учебная литература', img: cat8, width: 160, height: 160},
     ],
     [
-        { count: 157 },
-        { count: 124 },
-        { count: 98 },
-        { count: 145 },
-        { count: 72 },
-        { count: 105 },
+        { count: 157, id: Math.random() },
+        { count: 124, id: Math.random() },
+        { count: 98, id: Math.random() },
+        { count: 145, id: Math.random() },
+        { count: 72, id: Math.random() },
+        { count: 105, id: Math.random() },
     ]
 ]
 
@@ -45,21 +45,21 @@ class Table extends React.Component{
                         if (ind === 0) {
                             return <tr>
                                 {
-                                    tr.map((th) => <th>{th.title}</th>)
+                                    tr.map((th) => <th key={th.title}>{th.title}</th>)
                                 }
                             </tr>
                         }
                         if (ind === 1) {
                             return <tr>
                                 {
-                                    tr.map((th) => <td><img src={th.img} alt={th.alt} width={th.width} height={th.height}/></td>)
+                                    tr.map((th) => <td key={th.alt}><img src={th.img} alt={th.alt} width={th.width} height={th.height}/></td>)
                                 }
                             </tr>
                         }
                         if (ind === 2) {
                             return <tr>
                                 {
-                                    tr.map((th) => <th>В наличии книг: {th.count}</th>)
+                                    tr.map((th) => <th key={th.id}>В наличии книг: {th.count}</th>)
                                 }
                             </tr>
                         }
