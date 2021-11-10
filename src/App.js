@@ -7,7 +7,7 @@ import PageCSS from "./components/pageCSS";
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Routes
 } from "react-router-dom";
 
 
@@ -16,17 +16,11 @@ export default function App() {
       <Router>
         <div>
           <Menu />
-          <Switch>
-            <Route exact path="/react">
-              <PageReact />
-            </Route>
-            <Route exact path="/javascript">
-              <PageJS />
-            </Route>
-            <Route exact path="/css">
-              <PageCSS />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/react" element={<PageReact />} />
+            <Route exact path="/javascript" element={<PageJS />} />
+            <Route exact path="/css" element={<PageCSS />} />
+          </Routes>
         </div>
       </Router>
   );

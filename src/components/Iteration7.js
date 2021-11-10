@@ -1,82 +1,65 @@
 import React from "react";
 import '/home/user/my-app/src/styles/style.css';
 
-const textSpan = document.querySelector('#resultClick')
 
-const clickPromise = async () => {
-    let linkGit = `https://api.github.com/users/${document.querySelector('#inputLink').value}`
-    // Пример промиса
-    let promise = new Promise(function(resolve, reject) {
+class Iteration7 extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            gitrepo:'',
+            textSpan:''
+        };
 
-        setTimeout(() => resolve("done"), 1000);
-    });
-    promise.finally(() => console.log('Промис завершен'))
-    promise.catch(err => console.log(err))
-    promise.then(result => console.log(result))
-
-
-    await fetch(linkGit+'/repos')
-        .then(response => response.json())
-        .then(commits => {
-            let str = 'Репозитории - '
-            commits.map((commit)=> str+= `${commit.name} `);
-            textSpan.innerHTML = str;
-        })
-        .catch(error => textSpan.innerHTML = error.message)
-
-
-    await fetch(linkGit)
-        .then(response => response.json())
-        // Показываем аватар (githubUser.avatar_url) в течение 2 секунд (возможно, с анимацией)
-        .then(githubUser => {
-            let img = document.createElement('img');
-            img.src = githubUser.avatar_url;
-            img.className = "promise-avatar-example";
-            document.querySelector('#resultClick').append(img);
-            setTimeout(() => img.remove(), 2000); // (*)
-        })
-}
-
-const clickAsync = () => {
-    (async () => {
-        let linkGit = `https://api.github.com/users/${document.querySelector('#inputLink').value}`
-        let url = linkGit +'/repos';
-
-        let response = await fetch(url);// завершается с заголовками ответа
-        try {
-            let commits = await response.json(); // читать тело ответа в формате JSON
-            textSpan.innerHTML = commits[0].owner.login;
-        } catch (err) {
-            textSpan.innerHTML = `Ошибка HTTP: ${err.status}`
-        }
-    })()
-
-    async function showAvatar() {
-        let linkGit = `https://api.github.com/users/${document.querySelector('#inputLink').value}`
-        let githubResponse = await fetch(linkGit);
-
-        let githubUser = await githubResponse.json();
-        let img = document.createElement('img');
-        img.src = githubUser.avatar_url;
-        img.className = "promise-avatar-example";
-        document.querySelector('#resultClick').append(img);
-        await new Promise((resolve, reject) => setTimeout(resolve, 3000));
-        img.remove();
-
-        return githubUser;
+        this.clickPromise = this.clickPromise.bind(this)
+        this.clickAsync = this.clickAsync.bind(this)
     }
-    showAvatar();
-}
 
-function Iteration7 () {
-    return (
-        <div className='areaJS'>
-            <input id="inputLink" placeholder="ИМЯ ПОЛЬЗОВАТЕЛЯ" />
-            <button onClick={clickPromise} id="clickPromise">Promise</button>
-            <button onClick={clickAsync} id="clickAsync">async/await</button>
-            <span id="resultClick"> </span>
-        </div>
-    );
+    clickPromise() {
+
+        let linkGit = `https://api.github.com/users/${this.state.gitrepo}`
+
+        fetch(linkGit+'/repos')
+            .then(response => response.json())
+            .then(commits => {
+                let str = 'Репозитории - '
+                commits.map((commit)=> str+= `${commit.name} `);
+                this.setState({ ...this.state, textSpan: str});
+            })
+            .catch(error =>  this.setState({ ...this.state, textSpan: error.message}));
+        setTimeout(() => console.log(this.state), 0)
+    }
+
+    clickAsync() {
+        (async () => {
+            let linkGit = `https://api.github.com/users/${this.state.gitrepo}`
+            let url = linkGit + '/repos';
+
+            let response = await fetch(url);
+            try {
+                let commits = await response.json();
+                let str = 'Репозитории = '
+                commits.map((commit) => str += `${commit.name} `);
+                this.setState({...this.state, textSpan: str});
+            } catch (err) {
+                this.setState({...this.state, textSpan: `Ошибка HTTP: ${err.status}`});
+            }
+            setTimeout(() => console.log(this.state), 0)
+        })()
+    }
+
+
+    render() {
+        return (
+            <div className='areaJS'>
+                <input onChange={(e => {
+                    this.setState({ gitrepo: e.target.value })
+                })} id="inputLink" placeholder="ИМЯ ПОЛЬЗОВАТЕЛЯ" />
+                <button onClick={this.clickPromise} id="clickPromise">Promise</button>
+                <button onClick={this.clickAsync} id="clickAsync">async/await</button>
+                <span id="resultClick">{this.state.textSpan}</span>
+            </div>
+        );
+    }
 }
 
 export default Iteration7;

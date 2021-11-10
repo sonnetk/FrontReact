@@ -334,6 +334,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         showAvatar();
     }
+
     //Глобальный обработчик
     window.addEventListener('unhandledrejection', function(event) {
         // объект события имеет два специальных свойства:
