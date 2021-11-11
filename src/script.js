@@ -400,6 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Изучить React Hooks. Использовать в компоненте хуки useState, useCallback, useEffect.
 // Написать свой кастомный хук.
 //
+
 // Полученные знания:
 // - Функциональные компоненты React
 // - Вложенность компонентов
