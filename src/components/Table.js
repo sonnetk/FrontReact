@@ -52,7 +52,7 @@ class Table extends React.Component{
                         if (ind === 1) {
                             return <tr>
                                 {
-                                    tr.map((th) => <td key={th.alt}><img src={th.img} alt={th.alt} width={th.width} height={th.height}/></td>)
+                                    tr.map((th) => <td key={th.alt}><img className='cat' src={th.img} alt={th.alt} width={th.width} height={th.height}/></td>)
                                 }
                             </tr>
                         }

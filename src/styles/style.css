@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #162b5e;
+    --primary-color: #0c204f;
 }
 
 .area{
@@ -45,8 +45,6 @@
         background-color: var(--primary-color);
         box-shadow: 0 0 5px;
     }
-
-
 
 body * {
     -moz-transition: width .5s ease-in-out,left 1s ease-in-out;
@@ -108,6 +106,7 @@ a{
 }
 
 aside{
+    z-index: 99999;
     position: sticky;
     top: 0;
 }
@@ -282,7 +281,25 @@ button{
 }
 
 .active {
-    background-color: #333967;
+    color: #afafaf;
+}
+
+
+
+.superLi:hover {
+    transform: rotate(360deg);
+    transition: .3s;
+    color: #afafaf;
+}
+
+.cat {
+    border-radius: 10px;
+}
+
+.cat:hover {
+    filter: contrast(150%);
+    cursor: pointer;
+    transition: .3s;
 }
 
 button:hover {

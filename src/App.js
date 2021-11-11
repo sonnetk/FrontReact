@@ -17,9 +17,9 @@ export default function App() {
         <div>
           <Menu />
           <Routes>
-            <Route exact path="/react" element={<PageReact />} />
-            <Route exact path="/javascript" element={<PageJS />} />
-            <Route exact path="/css" element={<PageCSS />} />
+            <Route path="/react" element={<PageReact />} />
+            <Route path="/javascript" element={<PageJS />} />
+            <Route path="/css" element={<PageCSS />} />
           </Routes>
         </div>
       </Router>
