@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0c204f;
+    --primary-color: #283246;
 }
 
 .area{
@@ -316,4 +316,13 @@ button:hover {
     align-items: center;
     padding: 10px;
     overflow-x:auto;
+}
+
+.post{
+    width: 70%;
+    margin: 30px auto;
+    background-color: #e3e3ec;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
 }
