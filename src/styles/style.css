@@ -373,9 +373,9 @@ button:hover {
     width: 150px;
 }
 
-.btn {
-    position: relative;
-}
+/*.btn {*/
+/*    position: relative;*/
+/*}*/
 
 /*.dancedFrog {*/
 /*    animation: frogrotate 3s cubic-bezier(0, -0.02, 1, 0.96) infinite;*/
@@ -394,3 +394,9 @@ button:hover {
 /*        transform: rotate(360deg);*/
 /*    }*/
 /*}*/
+
+.post span {
+    position: relative;
+    float: right;
+    cursor: pointer;
+}

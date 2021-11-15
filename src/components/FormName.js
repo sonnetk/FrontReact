@@ -1,7 +1,12 @@
 import React, {useState, useMemo, useCallback, useEffect} from "react";
 import '/home/user/my-app/src/styles/style.css'
-import frog from '../styles/images/frog.gif';
-import Counter from "./Counter";
+// import frog from '../styles/images/frog.gif';
+
+function useMyEffect(test, message){
+    return useEffect(() => {
+        test(message)
+    }, [test, message])
+}
 
 function createUser(name, surname){
     const user = {name, surname}
@@ -23,9 +28,7 @@ function FormName() {
         console.log(text)
     }, [])
 
-    useEffect(() => {
-        test(message)
-    }, [test, message])
+    useMyEffect (test, message);
 
     return (
         <>
