@@ -68,20 +68,20 @@ class Iteration5 extends React.Component {
 
 // Жизненный цикл
     componentDidMount() {
-        console.log('Монтирование')
+        console.log('cl - Монтирование')
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log('Можно обновиться')
+        console.log('cl - Можно обновиться')
         return true
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log('Отрисовка обновилась')
+        console.log('cl - Отрисовка обновилась')
     }
 
     componentWillUnmount() {
-        console.log('Конец жизненного цикла компоненты')
+        console.log('cl - Конец жизненного цикла компоненты')
     }
 
 

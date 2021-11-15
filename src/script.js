@@ -427,3 +427,25 @@ document.addEventListener('DOMContentLoaded', function () {
 // - Хуки ЖЦ функционального компонента
 // - Функции ЖЦ классового компонента
 // - Оптимизация рендера классового и функционального компонентов
+
+
+//Итерация 12.
+// Использование TypeScript.
+//
+// Текущее задание:
+// Изучить использование типов внутри технологии.
+// Переписать (или скопировать рядом и исправить) текущее приложение React с использованием TypeScript.
+// Добавить проверку типов во внутреннее состояние, запросы к API, результатам запросов к API.
+//
+// Полезные ссылки:
+// https://www.typescriptlang.org/docs/handbook/intro.html
+// https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+// https://www.typescriptlang.org/docs/handbook/basic-types.html
+// https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html
+//
+// Полученные знания:
+// - Использование TypeScript в проекте
+// - Типы TypeScript
+// - Проверка типов с помощью TypeScript
+// - Приведение данных к определенному типу TypeScript
+// - Обработка ошибок компиляции при использовании TypeScript
