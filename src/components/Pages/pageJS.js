@@ -1,8 +1,8 @@
 import React from "react";
 import '/home/user/my-app/src/styles/style.css';
-import Iteration5 from "./Iteration5";
-import Iteration6 from "./Iteration6";
-import Iteration7 from "./Iteration7";
+import Iteration5 from "../Iteration5";
+import Iteration6 from "../Iteration6";
+import Iteration7 from "../Iteration7";
 
 class PageJS extends React.Component{
     render() {

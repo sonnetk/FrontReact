@@ -1,9 +1,9 @@
 import React from "react";
 import Menu from "./components/Menu";
 import '/home/user/my-app/src/styles/style.css';
-import PageReact from "./components/pageReact";
-import PageJS from "./components/pageJS";
-import PageCSS from "./components/pageCSS";
+import PageReact from "./components/Pages/pageReact";
+import PageJS from "./components/Pages/pageJS";
+import PageCSS from "./components/Pages/pageCSS";
 import {
   BrowserRouter as Router,
   Route,

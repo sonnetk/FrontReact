@@ -1,9 +1,29 @@
 import React from "react";
 import '/home/user/my-app/src/styles/style.css';
 
+// export const colors = [
+//     '#00ff41',
+//     '#00fbff',
+//     '#3100ff',
+//     '#cf00ff',
+//     '#f6ff00',
+//     '#00ff00',
+//     '#ff0900',
+//     '#ff00db',
+//     '#5e00ff',
+//     '#ffaf00',
+// ]
+//
+// export const changeColorsForm = () => {
+//     return colors[Math.floor(Math.random() * ((colors.length-1) - 0) + 0)]
+// }
+
 function Form() {
     return (
-        <form>
+        <form >
+        {/*<form className='animateDiv' onMouseMove={(e) => {*/}
+        {/*    e.target.style.background = changeColorsForm();*/}
+        {/*}}>*/}
             <div>
                 <fieldset>
                     <legend>Контактные данные</legend>
