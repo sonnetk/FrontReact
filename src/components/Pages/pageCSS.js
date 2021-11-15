@@ -1,9 +1,9 @@
 import React from "react";
 import '/home/user/my-app/src/styles/style.css';
-import Table from "../Table";
-import Form, {changeColorsForm} from "../Form";
-import About from "../About";
-import List from "../List";
+import Table from "./pageCSS/Table";
+import Form, {changeColorsForm} from "./pageCSS/Form";
+import About from "./pageCSS/About";
+import List from "./pageCSS/List";
 
 
 function PageCSS() {

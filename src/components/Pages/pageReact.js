@@ -1,8 +1,8 @@
 import React from "react";
 import '/home/user/my-app/src/styles/style.css';
-import Test from "../Test";
+import Test from "./pageReact/Test";
 import Counter from "../Counter";
-import FormName from "../FormName";
+import FormName from "./pageReact/FormName";
 
 class PageReact extends React.Component{
     render() {
