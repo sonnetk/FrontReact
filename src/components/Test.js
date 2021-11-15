@@ -11,6 +11,8 @@ function Test() {
             <div>
                 <h3>iteration 10.
                     Вывод постов (useState, useEffect, renderProps) </h3>
+
+                {/*Рендер-проп*/}
                 <DataProvider
                     url={getPost}
                     renderContent={(data) => <Posts posts={data}/>}/>

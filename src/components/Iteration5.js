@@ -19,6 +19,8 @@ class Iteration5 extends React.Component {
         this.hHereMouseout = this.hHereMouseout.bind(this)
         this.hHereMouseover = this.hHereMouseover.bind(this)
         this.hHereClick = this.hHereClick.bind(this)
+
+        console.log('Инициализирован')
     };
 
     hHereMouseout(){
@@ -63,6 +65,25 @@ class Iteration5 extends React.Component {
             color: 'white'
         });
     }
+
+// Жизненный цикл
+    componentDidMount() {
+        console.log('Монтирование')
+    }
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        console.log('Можно обновиться')
+        return true
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('Отрисовка обновилась')
+    }
+
+    componentWillUnmount() {
+        console.log('Конец жизненного цикла компоненты')
+    }
+
 
     render() {
         if (this.state.visibility){

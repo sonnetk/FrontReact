@@ -2,6 +2,8 @@ import React, {useState, useMemo, useCallback, useEffect} from "react";
 import '/home/user/my-app/src/styles/style.css'
 // import frog from '../styles/images/frog.gif';
 
+
+// Кастомный хук
 function useMyEffect(test, message){
     return useEffect(() => {
         test(message)
