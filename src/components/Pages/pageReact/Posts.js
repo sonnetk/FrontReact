@@ -3,7 +3,6 @@ import '/home/user/my-app/src/styles/style.css'
 
 
 function Posts({posts}) {
-
     return (
         <div>
             {posts.slice(-5).map(post => (

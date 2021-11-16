@@ -11,6 +11,12 @@ function DataProvider({url, renderContent}) {
             .then(json => {
                 setData(json)
             })
+        console.log('fn - Отрисовка обновилась')
+
+        return() => {
+            console.log('fn - Размонтирование')
+
+        }
     }, [url])
 
     return <div> {renderContent(data)} </div>;

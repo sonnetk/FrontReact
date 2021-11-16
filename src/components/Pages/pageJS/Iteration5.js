@@ -8,7 +8,7 @@ class Iteration5 extends React.Component {
 
         this.state = {
             visibility: false,
-            str: '',
+            str: localStorage.getItem('value'),
             color: 'none',
             colorBut: 'none'
         };
@@ -20,7 +20,7 @@ class Iteration5 extends React.Component {
         this.hHereMouseover = this.hHereMouseover.bind(this)
         this.hHereClick = this.hHereClick.bind(this)
 
-        console.log('Инициализирован')
+        console.log('cl - Инициализирован')
     };
 
     hHereMouseout(){
@@ -69,6 +69,9 @@ class Iteration5 extends React.Component {
 // Жизненный цикл
     componentDidMount() {
         console.log('cl - Монтирование')
+        // this.setState({
+        //     str: localStorage.getItem('value')
+        // });
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
@@ -78,9 +81,11 @@ class Iteration5 extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log('cl - Отрисовка обновилась')
+        localStorage.setItem('value', this.state.str)
     }
 
     componentWillUnmount() {
+        localStorage.removeItem('value')
         console.log('cl - Конец жизненного цикла компоненты')
     }
 

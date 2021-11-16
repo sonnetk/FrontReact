@@ -9,7 +9,8 @@ class PageJS extends React.Component{
         return(
             <div className='area'>
                 <h2>JavaScript</h2>
-                <h3> iteration 5</h3>
+                <h3> iteration 5.
+                    iteration 11 - Жизненный цикл в функциональных компонентах</h3>
                 <Iteration5 />
                 <h3> iteration 6</h3>
                 <Iteration6 />

@@ -9,8 +9,11 @@ function Test() {
     return (
         <div>
             <div>
-                <h3>iteration 10.
-                    Вывод постов (useState, useEffect, renderProps) </h3>
+                <h3>iteration 10 -
+                    Вывод постов (useState, useEffect, renderProps).
+                    iteration 11 -
+                    Жизненный цикл в классовых компонентах
+                </h3>
 
                 {/*Рендер-проп*/}
                 <DataProvider
